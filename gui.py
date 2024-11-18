@@ -11,7 +11,7 @@ import sys
 # Get the directory where this script is located
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 
-# Define activities dictionary
+# Define activities dictionary, here are some examlpes from mine for now ...
 ACTIVITIES = [
     {
         "name": "Gather Training Data", 
@@ -131,7 +131,7 @@ class ActivityLauncherApp:
                 sys.executable, path,
                 stdout=asyncio.subprocess.PIPE,
                 stderr=asyncio.subprocess.PIPE,
-                limit=1024*1024  # 1MB buffer size
+                limit=1024*1024  # 1MB buffer snuffer
             )
 
             async def read_stream(stream, tag=''):
